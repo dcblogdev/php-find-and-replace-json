@@ -1,0 +1,26 @@
+{
+    "name": "dcblogdev/php-find-and-replace-json",
+    "description": "Find and replace keys or values in json or arrays",
+    "license": "MIT",
+    "keywords": [
+        "PHP",
+        "JSON",
+        "array"
+    ],
+    "homepage": "https://github.com/dcblogdev/php-find-and-replace-json",
+    "authors": [
+        {
+            "name": "David Carr",
+            "email": "dave@dcblog.dev",
+            "homepage": "https://dcblog.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dcblogdev\\FindAndReplaceJson\\" : "src/" 
+        }
+    }
+}
