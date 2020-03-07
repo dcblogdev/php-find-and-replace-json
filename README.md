@@ -1,8 +1,6 @@
 # PHP Find and Replace JSON
 Takes a JSON payload and replaces either a key or value from a provided array.
 
-Adapten from a Stackoverflow answer, thank you @MasterOdin https://stackoverflow.com/a/29780516/1017963
-
 ## Installation
 Install via Composer
 
