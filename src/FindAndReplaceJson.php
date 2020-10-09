@@ -5,11 +5,11 @@ class FindAndReplaceJson
 {
     /**
      * replaces all values provided by $replaces into $payload
-     * 
-     * @param  json|array  $payload  
-     * @param  array  $replaces
-     * @param  boolean $isJson   
-     * @return json|array
+     *
+     * @param json|array $payload
+     * @param array $replaces
+     * @param boolean $isJson
+     * @return array|json|false|string
      */
     public function replace($payload, array $replaces, $isJson = true)
     {
