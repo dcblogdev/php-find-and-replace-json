@@ -1,4 +1,5 @@
 <?php
+
 namespace Dcblogdev\FindAndReplaceJson;
 
 class FindAndReplaceJson
