@@ -11,7 +11,7 @@ class FindAndReplaceJson
      * @param  boolean $isJson   
      * @return json|array
      */
-    public function replace($payload, $replaces, $isJson = true) 
+    public function replace($payload, array $replaces, $isJson = true)
     {
         if ($isJson == true) {
             $payload = json_decode($payload, true);
