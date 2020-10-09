@@ -13,13 +13,13 @@ class FindAndReplaceJson
      */
     public function replace($payload, array $replaces, $isJson = true)
     {
-        if ($isJson == true) {
+        if ($isJson === true) {
             $payload = json_decode($payload, true);
         }
 
         $payload = array_replace_recursive($payload, $replaces);
 
-        if ($isJson == true) {
+        if ($isJson === true) {
             return json_encode($payload);
         }
 
