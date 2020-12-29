@@ -1,50 +1,12 @@
-# PHP Find and Replace JSON
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dcblogdev/php-find-and-replace-json.svg?style=flat-square)](https://packagist.org/packages/dcblogdev/php-find-and-replace-json)
+[![Total Downloads](https://img.shields.io/packagist/dt/dcblogdev/php-find-and-replace-json.svg?style=flat-square)](https://packagist.org/packages/dcblogdev/php-find-and-replace-json)
+
+![Logo](https://repository-images.githubusercontent.com/245631268/aa9e9480-49c0-11eb-91c4-1bd9c9660361)
+
 Takes a JSON payload and replaces either a key or value from a provided array.
 
-## Installation
-Install via Composer
-
-```php
-composer require dcblogdev/php-find-and-replace-json
-```
-
-## Usage
-
-Provide a json array and a array containing values to replace.
-
-Create an instance of FindAndReplaceJson call replace and pass in the JSON array and array of replace values.
-
-JSON is returned with the replaced values. Keys can also be replaced by specifiying named keys in $replaces array. 
-
-```php
-$payload = json_encode([
-    'name'   => 'Joe Bloggs',
-    'age'   => 23,
-    'location' => 'London',
-]);
-
-//lets replace the values for age and location
-$replaces = [
-    'age' => 45, 
-    'location' => "Manchester"
-];
-
-$runner = new FindAndReplaceJson();
-return $runner->replace($payload, $replaces);
-```
-
-Result:
-
-```php
-{
-  "name": "Joe Bloggs",
-  "age": "45",
-  "location": "Manchester"
-}
-```
-
-By default JSON is expected but a normal array can be used by passing false as the third argument to FindAndReplaceJson.
-When the set to false FindAndReplaceJson expects an array and will return an array.
+# Documentation and install instructions 
+[https://dcblog.dev/docs/php-find-and-replace-json](https://dcblog.dev/docs/php-find-and-replace-json)
 
 ## Contributing
 
