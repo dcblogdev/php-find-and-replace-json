@@ -5,8 +5,50 @@
 
 Takes a JSON payload and replaces either a key or value from a provided array.
 
-# Documentation and install instructions 
-[https://dcblog.dev/docs/php-find-and-replace-json](https://dcblog.dev/docs/php-find-and-replace-json)
+## Install
+
+Install via Composer
+
+```
+composer require dcblogdev/php-find-and-replace-json
+```
+
+## Usage
+
+Provide a JSON array and an array containing values to replace.
+
+Create an instance of FindAndReplaceJson call replace and pass in the JSON array and array of replacing values.
+
+JSON is returned with the replaced values. Keys can also be replaced by specifying named keys in $replaces array.
+
+```php
+$payload = json_encode([
+    'name'   => 'Joe Bloggs',
+    'age'   => 23,
+    'location' => 'London',
+]);
+
+//lets replace the values for age and location
+$replaces = [
+    'age' => 45, 
+    'location' => "Manchester"
+];
+
+$runner = new FindAndReplaceJson();
+return $runner->replace($payload, $replaces);
+```
+
+Result:
+
+```
+{
+  "name": "Joe Bloggs",
+  "age": "45",
+  "location": "Manchester"
+}
+```
+
+By default, JSON is expected but a normal array can be used by passing false as the third argument to FindAndReplaceJson. When the set to false FindAndReplaceJson expects an array and will return an array.
 
 ## Contributing
 
