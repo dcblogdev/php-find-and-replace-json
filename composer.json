@@ -13,10 +13,18 @@
             "name": "David Carr",
             "email": "dave@dcblog.dev",
             "homepage": "https://dcblog.dev"
+        },
+        {
+            "name": "merloxx",
+            "email": "hello@merloxx.it",
+            "homepage": "https://merloxx.it"
         }
     ],
     "require": {
         "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {

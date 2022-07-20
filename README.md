@@ -9,7 +9,7 @@ Takes a JSON payload and replaces either a key or value from a provided array.
 
 Install via Composer
 
-```
+```console
 composer require dcblogdev/php-find-and-replace-json
 ```
 
@@ -28,7 +28,7 @@ $payload = json_encode([
     'location' => 'London',
 ]);
 
-//lets replace the values for age and location
+//let's replace the values for age and location
 $replaces = [
     'age' => 45, 
     'location' => "Manchester"
@@ -40,7 +40,7 @@ return $runner->replace($payload, $replaces);
 
 Result:
 
-```
+```json
 {
   "name": "Joe Bloggs",
   "age": "45",
@@ -48,7 +48,8 @@ Result:
 }
 ```
 
-By default, JSON is expected but a normal array can be used by passing false as the third argument to FindAndReplaceJson. When the set to false FindAndReplaceJson expects an array and will return an array.
+By default, JSON is expected but a normal array can be used by passing false as the third argument to FindAndReplaceJson.
+When the third argument (`$isJson`) is set to false FindAndReplaceJson expects an array and will return an array.
 
 ## Contributing
 
@@ -64,15 +65,23 @@ Contributions are accepted via Pull Requests on [Github][4].
 
 - **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
 
+## Running Tests
+
+To run unit tests, simply execute the following command in your console:
+
+```console
+vendor/bin/phpunit
+```
+
+
 ## Security
 
 If you discover any security related issues, please email dave@dcblog.dev email instead of using the issue tracker.
 
 ## License
 
-license. Please see the [license file][6] for more information.
+Please see the [license file][6] for more information.
 
 [4]:    https://github.com/dcblogdev/find-and-replace-json
 [5]:    http://semver.org/
 [6]:    license.md
-
