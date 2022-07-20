@@ -16,7 +16,6 @@
         }
     ],
     "require": {
-        "php": "^7.2",
         "ext-json": "*"
     },
     "autoload": {
